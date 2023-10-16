@@ -20,9 +20,4 @@ public class Controller {
     public ResponseEntity<ResponseDTO> sortPost(@RequestBody RequestDTO requestDTO){
         return new ResponseEntity<>(service.sortMessage(requestDTO), HttpStatus.OK);
     }
-
-    @GetMapping("/sort")
-    public ResponseEntity<ResponseDTO> sortGet(@RequestParam("message") RequestDTO requestDTO){
-        return new ResponseEntity<>(service.sortMessage(requestDTO), HttpStatus.OK);
-    }
 }
